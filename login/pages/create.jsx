@@ -5,13 +5,14 @@ function create() {
 
   const handleRegister = (e) =>{
     e.preventDefault()
-    axios.post('http://localhost:5000/newUser' , {email , password})
+    axios.post('https://login-mern-api-lake.vercel.app/newUser' , {email , password})
         .then(result => console.log(result))
         .catch(err => console.log(err))
   }
 
   const[email, setEmail] = useState('')
   const[password , setPassword] = useState('')
+  axios.defaults.withCredentials = true;
 
   return (
     <div className="formUI">

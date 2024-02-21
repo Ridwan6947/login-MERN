@@ -6,7 +6,7 @@ const Login = require('./models/login');
 const app = express();
 app.use(cors(
     {
-        origin : ["https://login-mern-api-psi.vercel.app"],
+        origin : ["https://login-mern-api-lake.vercel.app"],
         methods : [GET , POST],
         credentials : true
 
