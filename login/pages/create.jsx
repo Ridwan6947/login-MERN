@@ -29,7 +29,7 @@ function create() {
             </div>
           </div>
           <button className='btn'>Register</button>
-          <Link to="/login" className="btn">Sign in</Link>
+          <Link to="/" className="btn">Sign in</Link>
         </form>
       </div>
     </div>
