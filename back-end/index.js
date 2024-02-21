@@ -14,7 +14,7 @@ app.use(cors(
 ));
 app.use(express.json());
 
-const mongoDBURL = 'mongodb+srv://root:root@cluster0.eyccxmh.mongodb.net/Cluster0retryWrites=true&w=majority';
+const mongoDBURL = 'mongodb+srv://root:root@cluster0.eyccxmh.mongodb.net/test?retryWrites=true&w=majority';
 
 mongoose.connect(mongoDBURL)
     .then(() =>{
