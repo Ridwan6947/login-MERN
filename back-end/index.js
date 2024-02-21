@@ -4,7 +4,14 @@ const cors = require('cors')
 const Login = require('./models/login');
 
 const app = express();
-app.use(cors());
+app.use(cors(
+    {
+        origin : ["https://login-mern-api-psi.vercel.app"],
+        methods : [GET , POST],
+        credentials : true
+
+    }
+));
 app.use(express.json());
 
 const mongoDBURL = 'mongodb+srv://root:root@cluster0.eyccxmh.mongodb.net/Cluster0retryWrites=true&w=majority';
