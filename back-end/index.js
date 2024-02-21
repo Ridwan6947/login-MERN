@@ -4,17 +4,10 @@ const cors = require('cors')
 const Login = require('./models/login');
 
 const app = express();
-app.use(cors(
-    {
-        origin : ["https://login-dl56cyxsx-ridwan6947s-projects.vercel.app"],
-        methods : [GET , POST],
-        credentials : true
-
-    }
-));
+app.use(cors());
 app.use(express.json());
 
-const mongoDBURL = 'mongodb+srv://root:root@cluster0.eyccxmh.mongodb.net/?retryWrites=true&w=majority';
+const mongoDBURL = 'mongodb+srv://root:root@cluster0.eyccxmh.mongodb.net/Cluster0retryWrites=true&w=majority';
 
 mongoose.connect(mongoDBURL)
     .then(() =>{
