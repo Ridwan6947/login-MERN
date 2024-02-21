@@ -27,6 +27,10 @@ mongoose.connect(mongoDBURL)
         console.log(err);
     });
 
+
+    app.post('/' , async(req , res) =>{
+        res.json("Hello");
+    });
     app.post('/submit' , async(req , res) =>{
         const {email,password} = req.body;
         Login.findOne({email : email})
