@@ -29,7 +29,7 @@ mongoose.connect(mongoDBURL)
 
 
     app.post('/' , async(req , res) =>{
-        res.json("Hello");
+        res.json("Hello")
     });
     app.post('/submit' , async(req , res) =>{
         const {email,password} = req.body;
